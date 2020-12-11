@@ -1,0 +1,152 @@
+{% extends 'reports/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<style>
+
+#id_platform {
+    float: left;
+    margin-left: 30px;
+    width: 170px;
+    height: 30px;
+}
+
+label.col-form-label {
+    float: left; 
+    margin-left: 30px;
+    font-size: 17.5px;
+    margin-bottom: 10px;
+}
+
+input#id_person_name.textinput.textinput.form-control {
+      color: green !important; }
+      input#id_person_name.textinput.textinput.form-control {
+      float: left !important;
+      margin-left: 30px !important;
+      margin-top: 5px !important;
+      border-radius: 25px !important;
+      border: none !important;
+      width: 170px;
+      height: 30px;
+    }
+  input#id_person_name.textinput.textinput.form-control {
+    /* Firefox 18- */
+    color: green !important; }
+    input#id_person_name.textinput.textinput.form-control {
+    /* Firefox 19+ */
+    color: green !important; }
+    input#id_person_name.textinput.textinput.form-control {
+    color: green !important; }
+
+
+    input#id_contact.textinput.textinput.form-control {
+      color: green !important; }
+      input#id_contact.textinput.textinput.form-control {
+      float: left !important;
+      margin-left: 30px !important;
+      margin-top: 5px !important;
+      border-radius: 25px !important;
+      border: none !important;
+      width: 170px;
+      height: 30px;
+    }
+  .input#id_contact.textinput.textinput.form-control {
+    /* Firefox 18- */
+    color: green !important; }
+    input#id_contact.textinput.textinput.form-control {
+    /* Firefox 19+ */
+    color: green !important; }
+    input#id_contact.textinput.textinput.form-control {
+    color: green !important; }
+
+
+
+
+
+    textarea#id_description.textarea.form-control {
+      font-size: 13px;
+      width: 500px;
+      height: 100px;
+      float: left !important;
+      margin-left: 30px !important;
+      margin-top: 5px !important;
+      border: none !important;
+      resize: none !important;
+      color: green !important; }
+
+
+#mainbtnsbmit {
+    
+      background-color: #4DD0E1;
+      /* btn Color */
+      border: 0.5px solid #707070;
+      border-radius: 31px;
+      color: #000000;
+      padding: 9px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 20px;
+      font-style: 400;
+      margin: 10px 2px;
+      margin-top: 17px;
+      cursor: pointer;
+      letter-spacing: 0.5px; 
+}
+
+
+
+
+
+
+</style>
+
+
+<div class='square-box2'>
+    <div class='square-content2'>
+<div class="container-fluid">
+            <div id='squarecontent'>
+                <p id='reporthead'> Report </p>
+
+                <span id='reportsecond'> Report the person (or people) that are cyberbullying you. </span>
+                <p> Anything that you write here will remain anonymous. Please do not include any of your personal
+                    details. </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                  
+                <form method="POST">
+
+                    {% csrf_token %}
+                    {{ form | crispy }}
+
+                    <button id='mainbtnsbmit' type="submit">Submit</button>
+
+                </form>
+
+                <br>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
